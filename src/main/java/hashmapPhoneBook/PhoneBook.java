@@ -1,7 +1,6 @@
 package hashmapPhoneBook;
 
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,4 +38,20 @@ public class PhoneBook {
         return "";
     }
 
+    public String listAllEntries() {
+
+        String response = "";
+
+        for (Map.Entry<String, String> allEntries : contacts.entrySet()) {
+            response = response + allEntries.getKey() + " = " + allEntries.getValue() + "\n";
+        }
+        return response;
+    }
+
+    @Override
+    public String toString() {
+        return "PhoneBook{" +
+                "contacts=" + contacts +
+                '}';
+    }
 }

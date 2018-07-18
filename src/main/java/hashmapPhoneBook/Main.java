@@ -1,9 +1,5 @@
 package hashmapPhoneBook;
 
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -17,10 +13,10 @@ public class Main {
         directory.addUser("Satomi", "(332) 224-5411");
         directory.addUser("Tonsukeru", "(444) 313-6669");
         directory.addUser("Malfoy", "(123) 456-8790");
-        System.out.println(directory);
+        //System.out.println(directory);
 
         directory.removeAUser("Tonsukeru");
-        System.out.println("My List of contacts is: " + "\n" + directory);
+        System.out.println("My List of contacts is: " + "\n" + directory.toString());
         System.out.println("============================== SPACING ============================" + "\n");
 
 
@@ -33,6 +29,9 @@ public class Main {
         System.out.println("The contact for this # is: " + directory.reverseLookUpAUser("(666) 655-3233"));
         System.out.println("============================== SPACING ============================" + "\n");
 
+        directory.addUser("Tonsukeru", "(444) 313-6669");
+        System.out.println("My Contacts are: " + "\n");
+        System.out.println(directory.listAllEntries());
 
     //end of psvm
     }
@@ -77,7 +76,7 @@ Hashmap lab phone book
         iterator/ for each loop /and logic
 
 
-        Reverse Loop Up
+        Reverse Look Up
         <Key, Value> key- name, /// value-phonenum
         Public string reverseLookup(String Value)
            take in a value and return a key
